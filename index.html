@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -8,15 +8,17 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script defer src="fontawesome/js/all.js"></script>
-    <title>John Doe</title>
+
+    <title>Tyler Swedberg</title>
     <style>
         html,
         body {
             height: 100%;
-            font-family: 'Merriweather Sans', sans-serif;
+            font-family: 'Global User Interface';
             scroll-behavior: smooth;
+            background-color: rgba(241, 159, 234, 0.08);
         }
 
         .faded {
@@ -35,12 +37,11 @@
             border: 2px solid black;
             opacity: 0.5;
             transition: 0.3s;
-
         }
 
-        .btn-outline:hover {
-            opacity: 1;
-        }
+            .btn-outline:hover {
+                opacity: 1;
+            }
 
         .lang {
             height: 60px;
@@ -51,9 +52,9 @@
             font-size: 65px;
         }
 
-        .contacticon a {
-            color: rgb(33, 37, 41);
-        }
+            .contacticon a {
+                color: rgb(33, 37, 41);
+            }
 
         .course {
             margin: 0 10px;
@@ -66,35 +67,77 @@
             align-items: center;
         }
 
-        .course h5 {
-            margin: 0;
-        }
+            .course h5 {
+                margin: 0;
+            }
 
         .next {
             font-size: 65px;
         }
 
-        .next a {
-            color: rgb(33, 37, 41);
+            .next a {
+                color: rgb(33, 37, 41);
+            }
+
+        #mainImage {
+            width: 50%;
+            border-radius: 22px;
+            padding-bottom: 5%;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            background-color: #f4511e;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+            .navbar li a, .navbar .navbar-brand {
+                color: #fff !important;
+            }
+
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #f4511e !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
         }
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#landing">John Doe<span class="sr-only">(current)</span></a>
+        <a class="navbar-brand" href="#">Tyler Swedberg<span class="sr-only">(current)</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projects
+                    </a>
+                    <div class="dropdown-menu  bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                        <small><a class="dropdown-item" href="#projects">Projects</a></small>
+                        <small><a class="dropdown-item" href="https://cis-iis2.temple.edu/Fall2020/CIS3344_tuh36678/" target="_blank">Client-side Web Application</a></small>
+                        <small><a class="dropdown-item" href="http://cis-iis2.temple.edu/spring2021/CIS3342_tuh36678/homepage.aspx#" target="_blank">Server-side Web Application</a></small>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#courses">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#resume">Resume</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -102,34 +145,57 @@
             </ul>
         </div>
     </nav>
+    
     <div class="container landing d-flex justify-content-center flex-column align-items-center" id="landing">
         <div class="row mx-auto">
-            <h4 class="display-4 font-weight-bold mx-auto text-center">Hello, I'm John!</h4>
+            <h4 class="display-4 font-weight-bold mx-auto text-center">Hello, I'm Tyler!</h4>
         </div>
+        <img class="display-4 mx-auto justify-content-center img-responsive " src="images/Tyler.jpg" id="mainImage" />
         <div class="row mx-auto">
-            <h5 class="display-5 mx-auto faded text-center">I'm an Information Science & Technology Student at Temple
-                University.</h5>
+            <h5 class="display-5 mx-auto faded text-center">
+                I'm an Information Science & Technology Student at Temple
+                University. Half Japanese half American. I love video games and food. Nice to meet you!
+            </h5>
         </div>
+       
         <div class="row my-4">
-            <div class="col my-3"><img src="images/python.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="Python" /></div>
-            <div class="col my-3"><img src="images/angular.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="Angular" /></div>
-            <div class="col my-3"><img src="images/typescript.jpg" class="lang" data-toggle="tooltip"
-                    data-placement="top" title="TypeScript" /></div>
+            <div class="col my-3">
+                <img src="images/python.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="Python" />
+            </div>
+            <div class="col my-3">
+                <img src="images/angular.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="Angular" />
+            </div>
+            <div class="col my-3">
+                <img src="images/typescript.jpg" class="lang" data-toggle="tooltip"
+                     data-placement="top" title="TypeScript" />
+            </div>
 
-            <div class="col my-3"><img src="images/csharp.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="C#" /></div>
-            <div class="col my-3"><img src="images/node.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="Node.js" /></div>
-            <div class="col my-3"><img src="images/java.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="Java" /></div>
+            <div class="col my-3">
+                <img src="images/csharp.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="C#" />
+            </div>
+            <div class="col my-3">
+                <img src="images/node.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="Node.js" />
+            </div>
+            <div class="col my-3">
+                <img src="images/java.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="Java" />
+            </div>
 
-            <div class="col my-3"><img src="images/aspnet.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="ASP.NET" /></div>           
-                     <div class="col my-3"><img src="images/mssql.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="Microsoft SQL Server" /></div> <div class="col my-3"><img src="images/mongodb.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="MongoDB" /></div>
+            <div class="col my-3">
+                <img src="images/aspnet.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="ASP.NET" />
+            </div>
+            <div class="col my-3">
+                <img src="images/mssql.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="Microsoft SQL Server" />
+            </div> <div class="col my-3">
+                <img src="images/mongodb.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="MongoDB" />
+            </div>
 
         </div>
         <div class="row my-4">
@@ -140,12 +206,18 @@
                 <a href="#courses"><button type="button" class="btn btn-outline">Courses</button></a>
             </div>
             <div class="col">
+                <a href="#resume"><button type="button" class="btn btn-outline">Resume</button></a>
+            </div>
+            <div class="col">
                 <a href="#contact"><button type="button" class="btn btn-outline">Contact</button></a>
             </div>
         </div>
         <div class="row mt-5 next">
-            <a href="#projects" class="col"><i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
-                    title="Projects"></i></a> </div>
+            <a href="#projects" class="col">
+                <i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
+                   title="Projects"></i>
+            </a>
+        </div>
 
     </div>
     <div class="container landing d-flex justify-content-center flex-column align-items-center" id="projects">
@@ -153,42 +225,72 @@
             <h4 class="display-4 font-weight-bold mx-auto text-center">Projects</h4>
         </div>
         <div class="row mx-auto">
-            <h5 class="display-5 mx-auto faded text-center mb-4">I've worked on some neat things.</h5>
+            <h5 class="display-5 mx-auto faded text-center mb-4">I've worked on some sweet things.</h5>
         </div>
         <div class="row w-100">
-            <h5>Inspiro for Esperanza</h5>
+            <h5>Maze Solver</h5>
         </div>
         <div class="row w-100 mb-4">
-            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus nisi
-                in neque blandit auctor. Vestibulum pellentesque fringilla nulla quis sagittis. Donec id erat
-                sodales, fringilla est non, vestibulum tellus. Suspendisse potenti. Fusce et dolor blandit,
-                tincidunt eros non, pharetra orci. Donec massa neque, suscipit at purus ac, cursus tincidunt
-                purus. Suspendisse imperdiet massa nec sem dictum luctus. Vestibulum at porta lectus, sed
-                faucibus libero. </p>
+            <p class="text-justify">
+                During my time taking java here at Temple, one of my most memorable project I have done is
+                the maze solver. As a kid I would always try and solve mazes whether in a book or
+                in a magazine. I always wondered how people think when they make these mazes as well
+                as how do people make it complex enough for others to solve. Being able to create a maze
+                using the program given I was able to come up with an easy solution by using stacks.
+                When a program creates a specific dimension of the maze, it will be able to understand
+                how it can reach the end using the stack. (pretty much taking paths until it reaches the end.)
+            </p>
         </div>
         <div class="row w-100">
-            <h5>Work From Home Pinterest</h5>
+            <h5>Pizza Shop</h5>
         </div>
         <div class="row w-100 mb-4">
-            <p class="text-justify">Vestibulum vulputate ullamcorper placerat. Fusce bibendum ligula non ex dapibus
-                finibus. Nulla facilisi. Integer eu libero lorem. Pellentesque eget pretium ligula. Donec finibus nibh
-                sed leo dapibus imperdiet. Fusce cursus eu mi sed porttitor. Aliquam eget suscipit dolor, ac mollis
-                risus. Vestibulum commodo turpis nulla, bibendum varius urna dictum porta. </p>
+            <p class="text-justify">
+                This is a more recent project I had for my web server class. I used mssql, css, asp.net, C# to create
+                a web page that would be able to take order for a person, take that information, postback on the
+                same page, and show the outcome. As well as the total sales and quantity, taken from the database.
+                We used database to find base prices of a specific pizza type, as well as our totals.
+                This was a fun project since who doesn't like pizza.
+            </p>
         </div>
         <div class="row w-100">
-            <h5>Query Dating Site</h5>
+            <h5>Home Catalog WebAPi</h5>
         </div>
         <div class="row w-100">
-            <p class="text-justify">Fusce egestas lectus ac est porttitor congue. Mauris lacinia pharetra odio ut
-                egestas. Nullam facilisis condimentum consequat. Integer arcu nibh, ullamcorper non fringilla quis,
-                tempus sit amet turpis. Proin ac gravida mi. Ut eros quam, pharetra venenatis pharetra at, porttitor sit
-                amet dolor. Ut et accumsan metus. Phasellus eros diam, tristique a maximus vel, fringilla eu nisl.
-                Pellentesque sed quam non urna dapibus porta in in nibh. Phasellus lobortis nibh est, id pretium orci
-                efficitur at. </p>
+            <p class="text-justify">
+                This was a project from Client side. We create a WebAPI that was able to recieve data from the database
+                using restfulAPI. Using the httpget, put, post, and delete. This was a new experience using browser to take information
+                from another site/database. Overall, we made a website that showed all the homes that were
+                stored in the database using html, css, js/jquery, ajax, and C#.
+            </p>
         </div>
+        <br />
+        <div class="row w-100">
+            <div class="container">
+
+                <h4>Capstone Project Progress</h4>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                        20%
+                    </div>
+                </div>
+                <p class="text-justify">
+                    The capstone project is simply based on creating an application for the returning citizens to navigate
+                    and complete forms easier.
+                </p>
+            </div>
+
+        </div>
+        
+
         <div class="row mt-5 next">
-            <a href="#courses" class="col"><i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
-                    title="Courses"></i></a> </div>
+            <a href="#courses" class="col">
+                <i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
+                   title="Courses"></i>
+            </a>
+        </div>
+
     </div>
     <div class="container landing d-flex justify-content-center flex-column align-items-center" id="courses">
         <div class="row mx-auto">
@@ -222,9 +324,33 @@
             </div>
         </div>
         <div class="row mt-5 next">
-            <a href="#contact" class="col"><i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
-                    title="Contact"></i></a> </div>
+            <a href="#resume" class="col">
+                <i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
+                   title="Resume"></i>
+            </a>
+        </div>
     </div>
+    <div class="container landing d-flex justify-content-center flex-column align-items-center" id="resume">
+        <div class="row mx-auto">
+            <h4 class="display-4 font-weight-bold mx-auto text-center">Resume</h4>
+        </div>
+        <div class="row mx-auto mb-4">
+            <h5 class="display-5 mx-auto faded text-center">Let's resume with my resume.</h5>
+        </div>
+        <div class="row w-200 justify-content-center my-3">
+            <div class="col text-center course">
+                <h5><img src="images/resume.png" /></h5>
+            </div>
+        </div>
+
+        <div class="row mt-5 next">
+            <a href="#contact" class="col">
+                <i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
+                   title="Contact"></i>
+            </a>
+        </div>
+    </div>
+
     <div class="container landing d-flex justify-content-center flex-column align-items-center" id="contact">
         <div class="row mx-auto">
             <h4 class="display-4 font-weight-bold mx-auto text-center">Feel Like Reaching Out?</h4>
@@ -233,29 +359,41 @@
             <h5 class="display-5 mx-auto faded text-center">I don't bite.</h5>
         </div>
         <div class="row my-4 contacticon">
-            <a href="mailto:johndoe@gmail.com" class="col mx-3"><i class="fas fa-envelope-square"
-                    data-toggle="tooltip" data-placement="top" title="Email"></i></a>
-            <a href="https://www.linkedin.com/in/johndoe/" class="col mx-3"><i class="fab fa-linkedin"
-                    data-toggle="tooltip" data-placement="top" title="LinkedIn"></i></a>
-            <a href="https://github.com/johndoe" class="col mx-3"><i class="fab fa-github-square"
-                    data-toggle="tooltip" data-placement="top" title="Github"></i></a>
+            <a href="mailto:tuh36678@temple.edu" class="col mx-3">
+                <i class="fas fa-envelope-square"
+                   data-toggle="tooltip" data-placement="top" title="Email"></i>
+            </a>
+            <!--<a href="https://www.linkedin.com/in/johndoe/" class="col mx-3">
+                <i class="fab fa-linkedin"
+                   data-toggle="tooltip" data-placement="top" title="LinkedIn"></i>
+            </a>-->
+            <a href="https://www.facebook.com/tyler.swedberg" class="col mx-3">
+                <i class="fab fa-facebook"
+                   data-toggle="tooltip" data-placement="top" title="LinkedIn"></i>
+            </a>
+            <a href="https://github.com/TylerSwedberg/" class="col mx-3">
+                <i class="fab fa-github-square"
+                   data-toggle="tooltip" data-placement="top" title="Github"></i>
+            </a>
 
         </div>
         <div class="row mt-5">
             <a href="#landing"><button type="button" class="btn btn-outline">Return to Top</button></a>
         </div>
+
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
